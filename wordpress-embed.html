@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.min.js"></script>
+  <style>
+    /* Ensure the quiz container doesn't affect other WordPress content */
+    #bird-quiz-container {
+      all: initial;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    #bird-quiz-container * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div style="max-width: 800px; margin: 0 auto;">
+    <iframe 
+      id="bird-quiz-frame"
+      src="https://bird-quiz-component.netlify.app/"
+      style="width: 1px; min-width: 100%; border: none;"
+      scrolling="no"
+    ></iframe>
+  </div>
+
+  <script>
+    iFrameResize({ 
+      log: false,
+      checkOrigin: false
+    }, '#bird-quiz-frame');
+  </script>
+</body>
+</html>
