@@ -224,7 +224,7 @@ function App() {
             {submitError && (
               <p className="text-red-500 text-sm">{submitError}</p>
             )}
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row gap-2">
               <input
                 type="email"
                 value={email}
@@ -236,7 +236,7 @@ function App() {
               />
               <button 
                 type="submit"
-                className="bg-[#2C5530] text-white px-4 py-2 rounded flex items-center gap-2 disabled:opacity-50"
+                className="bg-[#2C5530] text-white px-4 py-2 rounded flex items-center gap-2 justify-center disabled:opacity-50"
                 disabled={isSubmitting}
               >
                 <Mail className="w-4 h-4" />
